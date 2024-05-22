@@ -1,7 +1,5 @@
 <?php
 
-use distinctelements\DistinctElements;
-
 final class DistinctElementsTest extends \PHPUnit\Framework\TestCase {
 	public function test_streaming_algorithm () {
 		$epsilon = 0.1;

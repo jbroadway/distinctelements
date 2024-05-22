@@ -1,7 +1,5 @@
 <?php
 
-namespace distinctelements;
-
 /**
  * A pure PHP implementation of the Distinct Elements in Streams algorithm for estimating
  * the number of distinct elements in a set, from the following paper:
@@ -10,14 +8,14 @@ namespace distinctelements;
  * 
  * Usage:
  * 
- *      use distinctelements\DistinctElements;
+ * 	    require __DIR__ . '/vendor/autoload.php';
  * 
  *      $stream = [1, 2, 3, 4, 1, 2, 3, 4, 5, 4, 3, 1, 2];
  *      $epsilon = 0.1;
  *      $delta = 0.1;
  * 
  *      $output = DistinctElements::streaming_algorithm ($stream, $epsilon, $delta);
- *      var_dump ($output);
+ *      var_dump ($output); // 5
  */
 class DistinctElements {
 	public static function streaming_algorithm (array $stream, float $epsilon = 0.1, float $delta = 0.1) {
@@ -48,13 +46,3 @@ class DistinctElements {
         return (mt_rand (0.0, 1.0) >= 0.5);
     }
 }
-
-$stream = array_map (function () {
-    return mt_rand (0, 100);
-}, array_fill (0, 100, null));
-$stream = [1, 2, 3, 4, 1, 2, 3, 4, 5, 4, 3, 1, 2];
-$epsilon = 0.1;
-$delta = 0.1;
-
-$output = DistinctElements::streaming_algorithm ($stream, $epsilon, $delta);
-var_dump ($output);
