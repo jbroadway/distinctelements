@@ -1,0 +1,24 @@
+{
+	"name": "jbroadway/distinctelements",
+	"type": "library",
+	"description": "A pure PHP implementation of the Distinct Elements in Streams algorithm for estimating the number of distinct elements in a set.",
+	"keywords": ["sets","streams","algorithm","distinct","estimation"],
+	"homepage": "https://github.com/jbroadway/distinctelements",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Johnny Broadway",
+			"email": "johnny@johnnybroadway.com",
+			"homepage": "http://www.johnnybroadway.com/"
+		}
+	],
+	"require": {
+		"php": ">=7.2"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^8.5"
+	},
+	"autoload": {
+		"psr-0": { "DistinctElements": "" }
+	}
+}
