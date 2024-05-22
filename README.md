@@ -13,7 +13,7 @@ https://arxiv.org/abs/2301.10191
 Install using [Composer](https://getcomposer.org/):
 
 ```
-composer require jbroadway/slimdown
+composer require jbroadway/distinctelements
 ```
 
 Usage:
