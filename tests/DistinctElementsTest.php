@@ -5,6 +5,11 @@ final class DistinctElementsTest extends \PHPUnit\Framework\TestCase {
 		$epsilon = 0.1;
 		$delta = 0.1;
 
+		$stream = [1, 2, 1, 2, 2];
+
+		$output = DistinctElements::streaming_algorithm ($stream, $epsilon, $delta);
+		static::assertSame (2, $output);
+
 		$stream = [1, 2, 3, 1, 2, 3];
 
 		$output = DistinctElements::streaming_algorithm ($stream, $epsilon, $delta);
@@ -19,5 +24,10 @@ final class DistinctElementsTest extends \PHPUnit\Framework\TestCase {
 
 		$output = DistinctElements::streaming_algorithm ($stream, $epsilon, $delta);
 		static::assertSame (10, $output);
+
+		$stream = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
+		$output = DistinctElements::streaming_algorithm ($stream, $epsilon, $delta);
+		static::assertSame (1, $output);
 	}
 }
